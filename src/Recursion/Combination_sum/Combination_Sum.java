@@ -1,3 +1,5 @@
+package Recursion.Combination_sum;
+
 import java.io.*;
 import java.util.*;
 class Solution {
@@ -12,7 +14,7 @@ class Solution {
 
         if (arr[ind] <= target) {
             ds.add(arr[ind]);
-            findCombinations(ind, arr, target - arr[ind], ans, ds);
+  findCombinations(ind, arr, target - arr[ind], ans, ds);
             ds.remove(ds.size() - 1);
         }
         findCombinations(ind + 1, arr, target, ans, ds);
@@ -23,7 +25,7 @@ class Solution {
         return ans;
     }
 }
-public class Main {
+class Main {
     public static void main(String[] args) {
         int arr[] = {2,3,6,7};
         int target = 7;
