@@ -1,6 +1,6 @@
 package bitsManipulation;
 
-public class Solve {
+public class TotalSetBits {
 
     public static int solution(int n)
     {
