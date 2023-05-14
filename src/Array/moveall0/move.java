@@ -19,7 +19,7 @@ public class move {
             }
         }
         // System.out.println(n-j);
-        for(int i=n-j;i<n;i++)
+       for(int i=n-j;i<n;i++)
         {
             a[i]=0;
         }
