@@ -26,5 +26,9 @@ public class spf {
         }
 
     }
+    public static void main(String[] args) {
 
+        int[] arr = new int[]{4, 2, 4, 5, 2, 3, 3, 1};
+        spf(20);
+    }
 }
