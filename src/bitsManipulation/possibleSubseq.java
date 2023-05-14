@@ -30,6 +30,6 @@ public class possibleSubseq {
     }
     public static void main(String[] args) {
 
-        AllPossibleStrings("aa");
+        AllPossibleStrings("abc");
     }
 }

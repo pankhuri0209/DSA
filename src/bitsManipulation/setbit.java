@@ -9,6 +9,7 @@ public class setbit {
         int pos=0;
         while(N!=0){
             if((N&1)==0){
+                System.out.println("12");
                 ans=(ans|(1<<pos));
                 break;
             }
