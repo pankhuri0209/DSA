@@ -1,4 +1,4 @@
-package Array;
+package Array.distinct_count;
 
 public class distinct_count {
     static int remove_duplicate(int A[],int N){
@@ -19,7 +19,7 @@ public class distinct_count {
     }
     public static void main(String[] args) {
 
-        int[] arr = new int[]{4, 2, 4, 5, 2, 3, 3, 1};
+        int[] arr = new int[]{1,2,2,3,3,4,4,4};
         remove_duplicate(arr,arr.length);
     }
 }
