@@ -5,102 +5,29 @@ import java.util.Stack;
 
 public class nextGreater {
     public static void main(String[] args) {
-
-         long[] arr = new long[]{7,8,1,4};
-       // long[] arr1= new long[arr.length];
-        //System.out.println(res);
-        System.out.println(Arrays.toString(nextLargerElement(arr,4)));
+         int[] arr = new int[]{5,4,3,2,1};
+         System.out.println(Arrays.toString(nextLargerElement(arr,5)));
     }
 
-    public static long[] nextLargerElement(long[] arr, int n) {
-        for (int i = 0; i < n - 1; i++) {
-            long curr = arr[i];
-            int j = i + 1;
-            long larger = curr;
-
-            while (j < n - 1 || arr[j] > larger) {
-                if (arr[j] > larger) {
-                    larger = arr[j];
-                }
-                j++;
-                if (j == n) {
-                    break;
-                }
+    public static int[] nextLargerElement(int[] arr, int n) {
+        int[] ans = new int[arr.length];
+        Stack<Integer>stack=new Stack<>();
+        for(int i =2*arr.length-1;i>=0;i--)
+        {
+            while(!stack.isEmpty() && stack.peek()<=arr[i%arr.length])
+            {
+                stack.pop();
             }
-            if (larger == arr[i]) {
-                arr[i] = -1;
-            } else {
-                arr[i] = larger;
+            if(i<arr.length)
+            {
+                if(stack.isEmpty() ==  false)
+                    ans[i] = stack.peek();
+                else
+                    ans[i] = -1;
             }
-
+            stack.push(arr[i%arr.length]);
         }
-        arr[n - 1] = -1;
-        return arr;
+        return ans;
     }
 
-
-    public static long[] nextLargestElement(long[] arr, int n)
-    {
-       for(int i=0;i<n-1;i++)
-       {
-           long curr= arr[i];
-           int j=i+1;
-           long larger= curr;
-
-           while ( j<n-1 ||arr[j]>larger)
-           {
-               if(arr[j]>larger)
-               {larger=arr[j];}
-               j++;
-               if(j==n){break;}
-           }
-           if(larger== arr[i] )
-           {
-              arr[i]=-1;
-           }
-           else
-           {
-               arr[i]= larger;
-           }
-
-       }
-        arr[n-1]=-1;
-        return arr;
-
-        // Your code here
-//        Stack<Long> stack= new Stack<>();
-//        long[] res = new long[arr.length];
-//        int j=0;
-//        long top=0;
-//        Arrays.fill(res, -1);
-//        boolean flag =false;
-//        for(int i=0;i<arr.length-1;i++)
-//        {
-//            j=i+1;
-//            long curr= arr[i];
-//            long next= arr[j];
-//            while(curr>next && j<arr.length)
-//            //if(curr<next)
-//            {
-//                flag=true;
-//                next=arr[j++];
-//                // stack.push(next);
-//            }
-//            if(flag==true && next>curr)
-//            {
-//                res[i]= next;
-//            //    stack.push(next);
-//            }
-//            flag=false;
-//        }
-//        int k=0;
-////        if(stack.size()>1)
-////        {
-////            for(int i=stack.size()-1;i>=0;i--)
-////            {
-////                res[i]=stack.pop();
-////            }
-////        }
-//        return res;
-    }
 }
