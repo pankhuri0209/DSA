@@ -5,8 +5,8 @@ import java.util.Stack;
 
 public class asteroidsCollision {
     public static void main(String[] args) {
-        int[] arr = new int[]{10,-10};
-        System.out.println(Arrays.toString(asteroidCollision(2,arr)));
+        int[] arr = new int[]{3,5,-3};
+        System.out.println(Arrays.toString(asteroidCollision(3,arr)));
     }
     public static int[] asteroidCollision(int n, int[] asteroids) {
         // code here
