@@ -6,7 +6,7 @@ import java.util.Stack;
 public class removek {
     public static void main(String[] args) {
         int[] arr = new int[]{3,5,-3};
-        System.out.println((removeKdigitsstack("9009",3)));
+        System.out.println((removeKdigitsstack("9009",5)));
     }
 
     //stacks
