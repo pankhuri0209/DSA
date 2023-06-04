@@ -6,31 +6,31 @@ import java.util.Stack;
 public class removek {
     public static void main(String[] args) {
         int[] arr = new int[]{3,5,-3};
-        System.out.println((removeKdigitsstack("9009",5)));
+        System.out.println((removeKdigitsstack("91009",1)));
     }
 
     //stacks
     public static String removeKdigitsstack(String S, int K) {
 
         Stack<Integer> st = new Stack<>();
-        for (int i = 0; i < S.length(); i++) {
+        for (int i = 0; i < S.length(); i++) {// looping to fill stack and keeping the highest element on top
             int digit = S.charAt(i) - '0';
-            while (!st.isEmpty() && digit < st.peek() && K > 0) {
-                st.pop();
+            while (!st.isEmpty() && digit < st.peek() && K > 0) {// to pop: stack should not be empty and k>0
+                st.pop();               // main condition to remove : peeked element is greater than digit
                 K--;
             }
-            st.push(digit);
+            st.push(digit);             //push every element of the string
         }
-        while (K > 0 && !st.isEmpty()) {
-            st.pop();
+        while (K > 0 && !st.isEmpty()) { //if k!=0 and stack not empty
+            st.pop();       ///pop the element
             K--;
         }
         StringBuilder sb = new StringBuilder();
         while (!st.isEmpty()) {
-            sb.append(st.pop());
+            sb.append(st.pop());    // append in the stringbuilder
         }
-        String ans = sb.reverse().toString();
-        while (ans.length() > 1 && ans.charAt(0) == '0') {
+        String ans = sb.reverse().toString(); // reverse
+        while (ans.length() > 1 && ans.charAt(0) == '0') { //ans should be >1 and 1st element is 0
             ans = ans.substring(1);
         }
         return ans;
