@@ -1,1 +1,1 @@
-# Competitive-Programming-Practise
+# DSA
