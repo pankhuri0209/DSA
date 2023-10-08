@@ -23,7 +23,7 @@ public class cookies {
     public static void main(String[] args)
     {
         // int [] arr= new int[]{44,22,55,11,66};
-        int res=findContentChildren(new int[]{1,2,3},new int[]{1,1,5});
+        int res=findContentChildren(new int[]{10,9,8,7},new int[]{5,6,7,8});
 
         System.out.println(res);
     }
