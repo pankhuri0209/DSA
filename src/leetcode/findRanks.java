@@ -74,12 +74,5 @@ public class findRanks {
 
     }
 
-    public static void main(String[] args)
-    {
-        // int [] arr= new int[]{44,22,55,11,66};
-        int[] arr= new int[]{5,4,3,2,1};
-        String [] res=findRelativeRanks(arr);
 
-        System.out.println(res);
-    }
 }

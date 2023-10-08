@@ -3,7 +3,7 @@ package leetcode;
 import java.util.Arrays;
 
 public class LHS {
-    public int findLHS(int[] nums) {
+    public  static int findLHS(int[] nums) {
         if(nums.length == 0){
             return 0;
         }
@@ -22,5 +22,13 @@ public class LHS {
             }
         }
         return ArrayLen;
+    }
+    public static void main(String[] args)
+    {
+        // int [] arr= new int[]{44,22,55,11,66};
+        int[] arr= new int[]{1,3,2,2,5,2,3,7};
+        int res=findLHS(arr);
+
+        System.out.println(res);
     }
 }
