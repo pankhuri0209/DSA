@@ -40,7 +40,7 @@ public class fairCandy {
     {
          int [] A= new int[]{1,2};
            int[] B= new int[]{2,3};
-     
+
         int res[]=fairCandySwap(A,B);
 
         System.out.println(Arrays.toString(res));
