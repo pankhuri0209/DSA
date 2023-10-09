@@ -26,7 +26,8 @@ public class finderror {
     public static void main(String[] args)
     {
         // int [] arr= new int[]{44,22,55,11,66};
-        int[] arr= new int[]{3,2,3,4};
+     //   int[] arr= new int[]{3,2,3,4};
+        int[] arr= new int[]{2,3,4,5,3};
         int res[]=findErrorNums(arr);
 
         System.out.println(Arrays.toString(res));
