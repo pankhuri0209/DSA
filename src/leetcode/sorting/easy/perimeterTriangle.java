@@ -26,7 +26,7 @@ public class perimeterTriangle {
     }
     public static void main(String[] args)
     {
-        int [] A= new int[]{2,1,2};
+        int [] A= new int[]{1,2,1,10};
         int[] B= new int[]{2,3};
 
         int res=largestPerimeter(A);
