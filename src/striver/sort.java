@@ -47,7 +47,7 @@ public class sort {
         {
             System.out.println(A[i]);
         }
-
+        System.out.println();
         //  System.out.println(findRestaurant(a,b));
 
         //  System.out.println(res);
