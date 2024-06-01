@@ -19,6 +19,7 @@ public class rotatell {
         }
         curr.next= head;
         k= k % total;
+        System.out.println();
         k= total-k;
         while(k-- >0)
         {
