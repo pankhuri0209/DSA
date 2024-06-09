@@ -3,18 +3,31 @@ package striver;
 public class rabinKarp {
     public static int repeatedStringMatch(String a, String b) {
 
-        // int ind = a.indexOf(b);
-        char firstChar= b.charAt(0); //find fist character in the string b
-        int index= a.indexOf(firstChar); // index from b first found in string a
+        int count = 1;
+        StringBuilder repeatedA = new StringBuilder(a);
 
-        int rem= b.length() - index;
-        int res=1;
-        while(b.length()>=index)
-        {
-            index+=a.length();
-            res++;
+        // Calculate the minimum number of repetitions required
+        while (repeatedA.length() < b.length()) {
+            repeatedA.append(a);
+            count++;
         }
-        return res;
+
+        // Check if b is a substring of the current repeated string
+        if (repeatedA.indexOf(b) != -1) {
+            return count;
+        }
+
+        // Append one more repetition and check again
+        repeatedA.append(a);
+        count++;
+
+        if (repeatedA.indexOf(b) != -1) {
+            return count;
+        }
+
+        // If b is still not a substring, return -1
+        return -1;
+
 
 
     }
