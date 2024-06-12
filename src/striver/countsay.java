@@ -4,6 +4,7 @@ public class countsay {
     public static String countAndSay(int n) {
         String val="1";
 
+
         for(int i=0;i<n-1;i++)
         {
             char c= val.charAt(0);
