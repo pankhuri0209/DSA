@@ -2,7 +2,7 @@ package stacksqueues;
 
 public class slidingwindow {
     public static int[] maxSlidingWindow(int[] nums, int k) {
-
+System.out.println("sdfsd");
         int[] res= new int[nums.length-k+1];
         int j=0,m=k;
         for(int i=0;i<=nums.length-k;i++)
