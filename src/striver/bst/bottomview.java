@@ -49,4 +49,27 @@ public class bottomview {
        {ans.add(val);}
        return ans;
     }
+    public static void main(String[] args) {
+        // Creating a sample binary tree
+        Node1 root = new Node1(1);
+        root.left = new Node1(2);
+        root.left.left = new Node1(4);
+        root.left.right = new Node1(10);
+        root.left.left.right = new Node1(5);
+        root.left.left.right.right = new Node1(6);
+        root.right = new Node1(3);
+        root.right.right = new Node1(10);
+        root.right.left = new Node1(9);
+
+        bottomview solution = new bottomview();
+
+        // Get the Bottom View traversal
+        List<Integer> bottomView = solution.bottomView(root);
+
+        // Print the result
+        System.out.println("Bottom View Traversal: ");
+        for(int node : bottomView) {
+            System.out.print(node + " ");
+        }
+    }
 }
