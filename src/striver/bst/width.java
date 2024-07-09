@@ -44,7 +44,7 @@ public class width {
                 }
                 if(node.right!=null)
                 {
-                    q.offer(new Pair(node.right, curr_id*2+1));
+                    q.offer(new Pair(node.right, curr_id*2+2));
                 }
                 ans= Math.max(ans, last- first+1);
             }
