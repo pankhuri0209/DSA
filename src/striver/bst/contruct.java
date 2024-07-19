@@ -29,7 +29,7 @@ public class contruct {
 
         root.left = buildTree(preOrder, preStart+1, preStart+numsLeft, inOrder, inStart, inRoot-1, inMap);
 
-        root.right =buildTree(preOrder, preStart+numsLeft+numsLeft+1, preEnd, inOrder, inRoot+1, inEnd, inMap
+        root.right =buildTree(preOrder, preStart+numsLeft+1, preEnd, inOrder, inRoot+1, inEnd, inMap
         );
         return root;
     }
