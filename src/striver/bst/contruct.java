@@ -7,7 +7,7 @@ public class contruct {
 
     public TreeNode buildTree(int[] preorder, int[] inorder)
     {
-        Map<Integer,Integer> inmap= new HashMap<>();
+        HashMap<Integer,Integer> inmap= new HashMap<>();
 
         for(int i=0;i<inorder.length;i++)
         {
