@@ -4,6 +4,7 @@ public class isSum {
     public static int isSumProperty(Node root)
     {
         // add your code here
+        System.out.println();
         if (root == null || (root.left == null && root.right == null)) {
             return 1; // An empty tree or a leaf node satisfies the sum property
         }
