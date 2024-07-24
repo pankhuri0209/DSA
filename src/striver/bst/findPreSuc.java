@@ -1,7 +1,6 @@
 package striver.bst;
 
 import sun.reflect.generics.tree.Tree;
-
 public class findPreSuc {
     public static void findPredSuc(TreeNode root, TreeNode[] pre, TreeNode[] suc, int key)
     {
@@ -30,7 +29,6 @@ public class findPreSuc {
             suc[0] = root;
             findPredSuc(root.left, pre, suc, key);
         }
-
     }
     private  static TreeNode findPred(TreeNode root)
     {
