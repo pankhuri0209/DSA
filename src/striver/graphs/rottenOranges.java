@@ -23,18 +23,18 @@ public class rottenOranges {
         int n= grid.length;
         int m= grid[0].length;
 
-        Queue<Pair> q= new LinkedList<>();
+        Queue<Pair> q= new LinkedList<>();   ////////
 
-        int[][] vis= new int[n][m];
-        int cntFresh=0;
+        int[][] vis= new int[n][m];    //////
+        int cntFresh=0;    ////
         for (int i=0;i<n;i++)
         {
             for (int j=0;j<m;j++)
             {
-                if(grid[i][j]==2)
+                if(grid[i][j]==2)     //
                 {
-                    q.add(new Pair(i,j,0));
-                    vis[i][j]=2;
+                    q.add(new Pair(i,j,0));   //
+                    vis[i][j]=2;  //
                 }
                 else {
                     vis[i][j]=0;
@@ -73,5 +73,17 @@ public class rottenOranges {
         {return -1;}
         return tm;
     }
+    public static void main(String[] args) {
+        rottenOranges solution = new rottenOranges();
 
-}
+        // Test case 1: All oranges can rot
+        int[][] grid1 = {
+                {2, 1, 1},
+                {1, 1, 0},
+                {0, 1, 1}
+        };
+        System.out.println("Test Case 1: " + solution.orangesRotting(grid1)); // Expected output: 4
+
+    }
+
+    }
