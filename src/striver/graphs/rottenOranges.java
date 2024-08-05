@@ -47,7 +47,7 @@ public class rottenOranges {
         }
 
         int tm=0;
-        int drow[]={-1,0+1,0};
+        int drow[]={-1,0,+1,0};
         int dcol[]={0,1,0,-1};
         int cnt=0;
         while (!q.isEmpty())
