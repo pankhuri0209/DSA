@@ -14,7 +14,7 @@ public class checkCycleUG {
             this.second = second;
         }
     }
-    public  boolean checkForCycle(ArrayList<ArrayList<Integer>> adj, int s,
+    public  boolean checkForCycleBFS(ArrayList<ArrayList<Integer>> adj, int s,
                                   boolean vis[])
     {
         Queue<Node> q =  new LinkedList<>(); //BFS
@@ -49,7 +49,7 @@ public class checkCycleUG {
 
 
 
-    public  boolean isCycle(int V, ArrayList<ArrayList<Integer>> adj)
+    public  boolean isCycleBFS(int V, ArrayList<ArrayList<Integer>> adj)
     {
         boolean vis[] = new boolean[V];
         Arrays.fill(vis,false);
@@ -58,10 +58,46 @@ public class checkCycleUG {
 
         for(int i=0;i<V;i++)
             if(vis[i]==false)
-                if(checkForCycle(adj, i,vis))
+                if(checkForCycleBFS(adj, i,vis))
                     return true;
 
         return false;
 
     }
+
+    ///dfs
+    public boolean isCycleDFS(int V, ArrayList<ArrayList<Integer>> adj)
+    {
+        int vis[] =new int[V];
+        for(int i=0;i<V;i++)
+        {
+            if(vis[i]==0)
+            {
+                if(dfs(i,-1,vis,adj) ==false)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    private boolean dfs(int node, int parent, int vis[], ArrayList<ArrayList<Integer>> adj)
+    {
+        vis[node]=1;
+        for(int adjNode: adj.get(node))
+        {
+            if(vis[adjNode] ==0)
+            {
+                if(dfs(adjNode, node, vis, adj) == true)
+                {
+                    return true;
+                }
+            } else if (adjNode!=parent) {
+                return true;
+
+            }
+        }
+        return  false;
+    }
+
 }
