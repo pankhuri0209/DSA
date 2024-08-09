@@ -40,6 +40,7 @@ public class noOfEnclaves {
 
         while (!q.isEmpty())
         {
+            System.out.println();
             int row= q.peek().first;
             int col= q.peek().second;
             q.remove();
