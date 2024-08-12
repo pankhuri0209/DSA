@@ -2,7 +2,7 @@ package striver.graphs;
 
 import java.util.ArrayList;
 
-public class isBipartite {
+public class isBipartiteDFS {
     public boolean isBipartite(int V, ArrayList<ArrayList<Integer>> adj)
     {
         int color[]= new int[V];
