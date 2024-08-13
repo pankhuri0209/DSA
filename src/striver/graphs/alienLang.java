@@ -20,7 +20,7 @@ public class alienLang {
             String s1= dict[i];
             String s2= dict[i+1];
             int len= Math.min(s1.length(), s2.length());
-            for (int ptr=0;i<len;i++)
+            for (int ptr=0;ptr<len;ptr++)
             {
                 if (s1.charAt(ptr) !=s2.charAt(ptr))
                 {
