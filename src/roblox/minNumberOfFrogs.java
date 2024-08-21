@@ -33,7 +33,8 @@ public class minNumberOfFrogs {
                     else {return -1;}
                     break;
                 case 'k':
-                    if(count[3]> count[4]){count[4]++;}
+                    if(count[3]> count[4]){count[4]++;frogs--;}
+
                     else{return -1;}
                     break;
             //    elsedefault:
