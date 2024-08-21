@@ -28,6 +28,7 @@ public class browserHistory {
     }
     public String forward(int steps)
     {
+        System.out.println("");
         currentIndeix=Math.min(history.size()-1, currentIndeix+steps);
         return  history.get(currentIndeix);
     }
