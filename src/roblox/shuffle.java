@@ -3,7 +3,7 @@ package roblox;
 public class shuffle {
     public static int[] shuffle(int[] nums, int n) {
         int pointer1=0, pointer2=0;
-        int[] res= new int[n];
+        int[] res= new int[nums.length];
         if(n>0)
         {
             pointer1=0;
