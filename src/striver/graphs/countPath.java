@@ -45,9 +45,9 @@ public class countPath {
                     }
                 }
             }
-
+        return -1;
     }
 
-        return -1;
+
     }
 }
