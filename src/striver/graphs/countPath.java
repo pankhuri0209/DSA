@@ -16,6 +16,7 @@ public class countPath {
     }
     int minimumMultiplications(int[] arr,int start, int end) {
     {
+        S
         //ArrayList<ArrayList<Pair>> adj= new ArrayList<ArrayList<Pair>>();
         Queue<Pair> q= new LinkedList<>();
         q.add(new Pair(start,0 ));
