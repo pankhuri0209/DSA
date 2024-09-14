@@ -37,7 +37,11 @@ public class rightSideView {
             for (int i=0;i<n;i++)
             {
                 TreeNode curr= q.poll();
-                bfs.add(curr.val);
+                if(i==n-1)
+                {
+                    bfs.add(curr.val);
+                }
+
                 if(curr.left!=null)
                 {
                     q.add(curr.left);
