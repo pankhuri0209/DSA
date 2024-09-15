@@ -54,7 +54,7 @@ public class shortestPathNoWeighs {
         // no. of vertices
         int V = 8;
         // Source and Destination vertex
-        int S = 2, D = 6;
+        int S = 0, D = 7;
         // Edge list
         List<List<Integer> > edges = Arrays.asList(
                 Arrays.asList(0, 1), Arrays.asList(1, 2),
