@@ -21,7 +21,8 @@ public class networkDelayTime {
                 int[] cur = pq.poll();
                 int node = cur[0];
                 int time = cur[1];
-                if (time> dist[node]){continue;}
+
+
                 if (graph.containsKey(node)){
                     for (int[] edge : graph.get(node)){
                         int neighbour = edge[0];
