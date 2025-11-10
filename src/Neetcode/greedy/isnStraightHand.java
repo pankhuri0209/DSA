@@ -32,4 +32,26 @@ public class isnStraightHand {
 
         return true;
     }
+    public boolean isNStraightHand1(int[] hand, int groupSize) {
+        int n= hand.length;
+        if (n%groupSize!=0){
+            return false;
+        }
+        TreeMap<Integer, Integer> map = new TreeMap<>();
+        for (int x:hand){
+            map.put(x,map.getOrDefault(x,0)+1);
+        }
+        for(int key:map.keySet()){
+            int freq= map.get(key);
+            if (freq>0)
+            {
+                for(int i= 0;i<groupSize;i++){
+                    int next= key+i;
+                    if (map.getOrDefault(next,0)<freq){return  false;}
+                    map.put(next, map.get(next)-freq);
+                }
+            }
+        }
+        return true;
+    }
 }
