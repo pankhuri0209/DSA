@@ -42,11 +42,11 @@ public class findRedundantConnection {
 }
 
 //
-public int[] findRedundantConnection1(int[][] edges) {
-
-        int n = edges.length;
-        int[] parents = new int[n+1];
-
-}
+//public int[] findRedundantConnection1(int[][] edges) {
+//
+//        int n = edges.length;
+//        int[] parents = new int[n+1];
+//
+//}
 
 }
